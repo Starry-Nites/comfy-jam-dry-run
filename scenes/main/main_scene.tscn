@@ -1,5 +1,16 @@
 [gd_scene format=3 uid="uid://b0ivexj6amqjd"]
 
-[node name="MainScene" type="Node2D" unique_id=1435703880]
+[ext_resource type="Texture2D" uid="uid://f02u04acolml" path="res://assets/backgrounds/background-for-your-2d-games-board-game-top-view-ground-and-leaves-top-down-game-background-for-your-games-vector.jpg" id="1_dv3lr"]
+[ext_resource type="Script" uid="uid://cxdl1h6ds8wr6" path="res://scenes/main/main_scene.gd" id="1_ei2sf"]
+[ext_resource type="PackedScene" uid="uid://c4q26oltngku0" path="res://scenes/player/player.tscn" id="3_ubvhi"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1672983414]
+[node name="MainScene" type="Node2D" unique_id=1435703880]
+script = ExtResource("1_ei2sf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1024259028]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_dv3lr")
+
+[node name="Player" parent="." unique_id=303951891 instance=ExtResource("3_ubvhi")]
+position = Vector2(470, 390)
