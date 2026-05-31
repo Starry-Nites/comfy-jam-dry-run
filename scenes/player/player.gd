@@ -67,7 +67,8 @@ func _physics_process(delta: float) -> void:
 		y_direction = 0
 		animation = "idle_" + last_dir
 		if (animation == "idle_"):
-			animation +"front"
+			#print("This shit sucks.")
+			animation += "front"
 	#endregion
 	
 	_animated_sprite.play(animation)
